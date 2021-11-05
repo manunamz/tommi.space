@@ -10,7 +10,7 @@ layout: wrapper
 		<p>
 			<time class='dt-published' datetime='{{ page.date | date_to_xmlschema }}'>
 				{% if page.lang == 'it' %}
-					{% include date-it.html %}
+					{% include date-it.liquid %}
 				{% else %}
 					{{ page.date | date: '%d %B %Y' }}
 				{% endif %}
@@ -18,14 +18,14 @@ layout: wrapper
 		</p>
 	</div>
 
-	{% include post-tags.html %}
+	{% include post-tags.liquid %}
 
-	{% include goto.html %}
+	{% include goto.liquid %}
 
 	<div class='row'>
 		<article class='e-content post'>
 
-			{% include anchor-parser.html html=content anchorBody='#' anchorClass='anchor' %}
+			{% include anchor-parser.liquid html=content anchorBody='#' anchorClass='anchor' %}
 
 		</article>
 	</div>
@@ -34,15 +34,15 @@ layout: wrapper
 
 <div class='row'>
 	<div class='one column'>
-	{% include backlinks.html %}
+	{% include backlinks.liquid %}
 	</div>
 </div>
 
 <div class='row'>
 	<div class='half column'>
-		{% include share.html %}
+		{% include share.liquid %}
 	</div>
 	<div class='half column'>
-		{% include comments.html %}
+		{% include comments.liquid %}
 	</div>
 </div>

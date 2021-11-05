@@ -21,7 +21,7 @@ description: "Tutti i contenuti in italiano"
 		<managingEditor>{{ site.email }}</managingEditor>
 		<webMaster>{{ site.email }}</webMaster>
 		<copyright>copyright © ({{ site.author.name }})</copyright>
-		{% assign jam = site.notes | sort: 'updated' | reverse %}
+		{% assign jam = site.notes %}
 		{% for page in jam %}
 			{% if page.lang == 'it' %}
 				<item>

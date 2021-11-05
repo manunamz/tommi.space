@@ -12,7 +12,7 @@ todo:
 	<div class="row tag" id="{{ tag.title | slugify }}">
 		<div class="border box" style="border-color:{{ tag.color}}">
 			<h2 class="title">{{ tag.title }}</h2>
-			<p>{{ tag.description | markdownify }}</p>
+			<p>{{ tag.description }}</p>
 			{% capture tagg %}{{ tag.title | downcase | slugify }}{% endcapture %}
 			<ul class="three">
 				{% for note in site.notes %}

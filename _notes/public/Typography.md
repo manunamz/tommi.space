@@ -30,7 +30,7 @@ A premise: I have a fetish for Typography. I really do. I often find myself twea
 Update 3<sup>rd</sup> December 2020: I will never stop loving Inter and using it **everywhere**
 	- [play with it](https://rsms.me/inter/lab/ 'Inter lab')
 	- [why](/genesi#tipografia 'Genesi, tipografia') this website uses Inter
-- [Merriweather](https://github.com/SorkinType/Merriweather), ~~the serif font I use on this blog~~ (not anymore), it’s designed by [Eben Sorkin](http://sorkintype.com/about.html 'About Eben Sorkin').   
+- [Merriweather](https://github.com/SorkinType/Merriweather), ~~the serif font I use on this blog~~ (not anymore), it’s designed by [Eben Sorkin](http://sorkintype.com/about.liquid 'About Eben Sorkin').   
 Update 3<sup>rd</sup> December 2020: I've been deluded: like [Playfair Display](https://github.com/clauseggers/Playfair-Display), it feels AWESOME at the beginning, it then gets itchy and bothering after a while.
 - [Graphik](https://commercialtype.com/catalog/graphik), Sans Serif
 - Garamond is the most widely used and loved font in the italian publishing industry, and to me it's the best serif font for narrative writing. [EB Garamond](http://www.georgduffner.at/ebgaramond/ 'EB Garamond official website') is its renewed, open, digitally friendly alternative, and I use it when I want to use serif in my blog. Its designer is [a great guy](http://georgduffner.at/ 'George Duffner personal website')
@@ -51,7 +51,7 @@ Update 3<sup>rd</sup> December 2020: I've been deluded: like [Playfair Display](
 
 In order to make pages load faster, there are ways to drastically reduce a font file size, by basically removing unused glyphs.
 
-```sh
+```
 pyftsubset Inter.ttf \
   --unicodes='U+0020-007F,U+00A0-00FF,U+2013-204A,U+2150-215F,U+2190-2199,U+21A9,U+21AF,U+2200,U+2203-2209,U+2211,U+221A,U+2325,U+232B,U+2318,U+237A,U+25E6' \
   --layout-features='' \

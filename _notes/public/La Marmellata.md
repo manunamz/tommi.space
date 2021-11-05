@@ -20,11 +20,10 @@ Da questa pagina è possibile partire per navigare all'interno della Marmellata.
 
 Ogni elemento della Marmellata è connesso ad un altro: in fondo ad ogni nota, fra i [*backlinks*](#backlinks) sono elencate tutte le pagine in cui la nota corrente è stata menzionata.
 
-{% include tags.html %}
 
 <div class='row'>
 	<div class='half column'>
-		{% include filter-lang.html %}
+		{% include filter-lang.liquid %}
 	</div>
 	<div class='half column flex'>
 		<a class='red button' style='color:white;' href='/whole-jam'  target='_blank' title='The Whole Jam'>Tutte le note</a>
@@ -34,7 +33,7 @@ Ogni elemento della Marmellata è connesso ad un altro: in fondo ad ogni nota, f
 <ul>
 	{% assign jam = site.notes | where: 'main', 'true' %}
 	{% for note in jam %}
-		<li lang='{{ note.lang }}'><a href='{{ note.url }}' lang='{{ note.lang }}'>{{ note.title }}</a> - {% if note.description %}{{ note.description | markdownify | strip_html | truncatewords: 30 }}{% else %}{{ note.excerpt | strip_html | truncatewords: 30 }}{% endif %}</li>
+		<li lang='{{ note.lang }}'><a href='{{ note.url }}' lang='{{ note.lang }}'>{{ note.title }}</a> - {% if note.description %}{{ note.description | strip_html | truncatewords: 30 }}{% else %}{{ note.excerpt | strip_html | truncatewords: 30 }}{% endif %}</li>
 	{% endfor %}
 </ul>
 <div class='flex row'>

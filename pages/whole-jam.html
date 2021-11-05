@@ -13,15 +13,15 @@ redirect_from: ["/tutta-la-marmellata", "/tutta-marmellata", "/the-whole-jam", "
 	<h1>{{ page.title }}</h1>
 </div>
 <div class="one column">
-	{% include filter-lang.html %}
+	{% include filter-lang.liquid %}
 	<div class="grid">
-		{% assign jam = site.notes | sort: 'updated' | reverse %}
+		{% assign jam = site.notes %}
 		{% for note in jam %}
 			<a href="{{ note.url }}" lang="{{ note.lang }}" hreflang="{{ note.lang }}" title="{{ note.title }}">
 				<div class="vertical flex box">
 					<h3>{{ note.title }}</h3>
 					{% if note.description %}
-						<p>{{ note.description | markdownify | strip_html | truncatewords: 30 }}</p>
+						<p>{{ note.description | strip_html | truncatewords: 30 }}</p>
 					{% else %}
 						<p>{{ note.excerpt | strip_html | truncatewords: 30 }}</p>
 					{% endif %}

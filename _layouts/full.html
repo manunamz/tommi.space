@@ -2,7 +2,7 @@
 ---
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+{% include head.liquid %}
 	<style>
 		body {
 			background: var(--primary);
@@ -26,7 +26,7 @@
 <body class='full'>
 	<a class='vertical flex' href='{{ page.link }}'>
 		<h1 style='margin: 1rem auto'>{{ page.title }}</h1>
-		{{ content | markdownify }}
+		{{ content }}
 	</a>
 </body>
 </html>

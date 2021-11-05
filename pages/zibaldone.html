@@ -2,9 +2,9 @@
 title: Zibaldone
 lang: it
 permalink: /zibaldone
-pagination:
-  enabled: true
-  permalink: '/:num/'
+#pagination:
+#  enabled: true
+#  permalink: '/:num/'
 ---
 <div class='page-header row'>
 	<div class='one column'>
@@ -17,10 +17,10 @@ pagination:
 
 <div class='row'>
 	<div class='two-thirds column'>
-		{% include tags.html %}
+		{% include tags.liquid %}
 	</div>
 	<div class='one-third column'>
-		{% include filter-lang.html %}
+		{% include filter-lang.liquid %}
 	</div>
 </div>
 	
@@ -30,7 +30,7 @@ pagination:
 			<a class='box' href='{{ post.url }}' hreflang='{{ post.lang }}' lang='{{ post.lang }}'>
 				<img src='{{ post.image }}' alt='{{ post.title }}' title='{{ post.title }}' />
 				<h2>{{ post.title }}</h2>
-				<p class='date'><time class='dt-published' datetime='{{ page.date | date_to_xmlschema }}'>{{ post.date | date_to_long_string }}</time></p>
+				<p class='date'><time class='dt-published' datetime='{{ page.date | date_to_xmlschema }}'>{{ post.date | date: "%-d %B %Y" }}</time></p>
 				<cite class='excerpt'>
 					{{ post.excerpt | strip_html | truncatewords: 40 }}
 				</cite>
@@ -50,4 +50,4 @@ pagination:
 	{% endfor %}
 </div>
 
-{% include pages.html %}
+{% include pages.liquid %}

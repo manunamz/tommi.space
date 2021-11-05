@@ -1,4 +1,4 @@
-{% assign stuff = site.data.stuff | sort: 'current' %}
+{% assign stuff = site.data.stuff %}
 {% for thing in stuff %}
 	{% if page.lang == 'it' %}
 		<div class="box row" style="color: {{ thing.color }}; background: {{ thing.background }}" id="{{ thing.title | slugify }}">
@@ -7,7 +7,7 @@
 			</div>
 			<div class="half column vertical flex">
 				<img class="stuff-logo" src="{{ site.logos }}/stuff/{{ thing.logo }}" alt="{{ thing.title }} logo" title="{{ thing.title }}" />
-				<p>{{ thing.description-it | markdownify }}</p>
+				<p>{{ thing.description-it }}</p>
 				<a href="{{ thing.link }}"  target="_blank" class="written button" style="color: {{ thing.background }}; background: {{ thing.color }};">{{ thing.button-it }}</a>
 			</div>
 		</div>
@@ -18,7 +18,7 @@
 			</div>
 			<div class="half column vertical flex">
 				<img class="stuff-logo" src="{{ site.logos }}/stuff/{{ thing.logo }}" alt="{{ thing.title }} logo" title="{{ thing.title }}" />
-				<p>{{ thing.description | markdownify }}</p>
+				<p>{{ thing.description }}</p>
 				<a href="{{ thing.link }}"  target="_blank" class="written button" style="color: {{ thing.background }}; background: {{ thing.color }};">{{ thing.button }}</a>
 			</div>
 		</div>

@@ -11,12 +11,12 @@ todo:
   - print price
   - print whether the app is open source or not
 ---
-{% assign macosapps = site.data.apps | where: 'os', 'MacOS' | sort: 'name' %}
-{% assign androidapps = site.data.apps | where: 'os', 'Android' | sort: 'name' %}
-{% assign iosapps = site.data.apps | where: 'os', 'iOS' | sort: 'name' %}
-{% assign terminalapps = site.data.apps | where: 'os', 'terminal' | sort: 'name' %}
-{% assign linuxapps = site.data.apps | where: 'os', 'Linux' | sort: 'name' %}
-{% assign remember = site.data.apps | where: 'remember', '1' | sort: 'name' %}
+{% assign macosapps = site.data.apps | where: 'os', 'MacOS' %}
+{% assign androidapps = site.data.apps | where: 'os', 'Android' %}
+{% assign iosapps = site.data.apps | where: 'os', 'iOS' %}
+{% assign terminalapps = site.data.apps | where: 'os', 'terminal' %}
+{% assign linuxapps = site.data.apps | where: 'os', 'Linux' %}
+{% assign remember = site.data.apps | where: 'remember', '1' %}
 
 ## MacOS
 

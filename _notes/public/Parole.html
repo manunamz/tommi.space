@@ -11,7 +11,7 @@ todo:
 <ul class="two">
 	{% for p in site.data.parole %}
 		<li>
-			{{ p.date | date_to_long_string }} 
+			{{ p.date | date: "%-d %B %Y" }} 
 			{% if p.url != "" %}
 				{% if p.lang == 'it' %}
 					<a href="https://www.treccani.it/vocabolario/{{ p.word | url_encode }}" target="_blank" title="“{{ p.word }}” nel vocabolario Treccani">{{ p.word }}</a>

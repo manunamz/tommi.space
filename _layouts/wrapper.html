@@ -4,7 +4,7 @@ layout: compress
 <!DOCTYPE html>
 <html lang="{% if page.lang == 'it' %}it{% else %}en{% endif %}" prefix="og: http://ogp.me/ns#" dir="ltr">
 
-	{% include head.html %}
+	{% include head.liquid %}
 
 	<body {% if page.class %}class='{{ page.class }}'{% endif %}>
 		<a id="to-top" class="tool" href="#" title="scroll to top">
@@ -32,20 +32,20 @@ layout: compress
 			}
 		</script>
 
-		{% include nav.html %}
+		{% include nav.liquid %}
 
 		{% if page.tags contains 'draft' or page.tags contains 'wip' %}
-			{% include draft.html %}
+			{% include draft.liquid %}
 		{% endif %}
 
 		{% if page.tags contains 'help' %}
-			{% include help.html %}
+			{% include help.liquid %}
 		{% endif %}
 
 		{{ content }}
 
 		<div class="row">
-			{% include footer.html %}
+			{% include footer.liquid %}
 		</div>
 	
 	</body>

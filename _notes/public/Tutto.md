@@ -15,17 +15,17 @@ toc: false
 Dato che, per mia natura, sono una trottola che gira ovunque per fare tante (troppe) diverse cose 
 
 <div class='yellow box'>
-Alcuni link fra i seguenti potrebbero essere protetti da password oppure non aggiornati. Se aveste bisogno di accedere a immagini private, <a class='u-email' href='mailto:{{ site.email | encode_email }}' rel='me' title='Scrivimi un’email'>scrivetemi</a>.
+Alcuni link fra i seguenti potrebbero essere protetti da password oppure non aggiornati. Se aveste bisogno di accedere a immagini private, <a class='u-email' href='mailto:{{ site.email }}' rel='me' title='Scrivimi un’email'>scrivetemi</a>.
 </div>
 
 <ul>
-	{% assign tutto = site.data.tutto | sort: 'end' %}
+	{% assign tutto = site.data.tutto %}
 	{% for cosa in tutto %}
 		<li {% if cosa.id %}id='{{ cosa.id }}'{% endif %}>
 			{% if cosa.start %}
-				Da {{ cosa.start | date_to_string }} a {{ cosa.end | date_to_string }}, 
+				Da {{ cosa.start | date: "%-d %b %Y" }} a {{ cosa.end | date: "%-d %b %Y" }}, 
 			{% else %}
-				{{ cosa.end | date_to_string }}, 
+				{{ cosa.end | date: "%-d %b %Y" }}, 
 			{% endif %}
 			{% if cosa.url %}
 				<a href='{{ cosa.url }}' target='_blank' title='{{ cosa.title }}'>{{ cosa.title }}</a>, 

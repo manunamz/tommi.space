@@ -14,7 +14,7 @@ todo:
 - [Maxim Dondyuk](https://maximdondyuk.com/ 'Maxim Dondyuk')
 - [Antonio Masiello](https://antoniomasiello.portfoliobox.net/ 'Antonio Masiello')
 - [Gueorgui Pinkhassov](https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/ 'Gueorgui Pinkhassov')
-- [Sebastião Salgado]({{ 'https://en.wikipedia.org/wiki/Sebastião_Salgado' | uri_escape }} 'Sebastião Salgado on Wikipedia')
+- [Sebastião Salgado]({{ 'https://en.wikipedia.org/wiki/Sebastião_Salgado' }} 'Sebastião Salgado on Wikipedia')
 - [Steve McCurry](https://www.stevemccurry.com 'Steve McCurry')
 
 <br>

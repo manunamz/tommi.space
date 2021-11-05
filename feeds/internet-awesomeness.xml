@@ -21,7 +21,7 @@ description: "Internet Awesomeness entries"
 		<managingEditor>{{ site.email }}</managingEditor>
 		<webMaster>{{ site.email }}</webMaster>
 		<copyright>copyright © ({{ site.author.name }})</copyright>
-		{% assign ia = site.data.internet-awesomeness | sort: 'date' | reverse %}
+		{% assign ia = site.data.internet-awesomeness %}
 		{% for w in ia %}
 			<item>
 				<title>{{ w.name | xml_escape }}</title>

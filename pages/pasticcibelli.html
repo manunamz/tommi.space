@@ -25,7 +25,7 @@ primary: var(--teal)
 
 <div class="row">
 	<div class="one column">
-	{% assign poetry = site.poetry | reverse %}
+	{% assign poetry = site.poetry %}
 		{% for poem in poetry %}
 		{% if poem.bella == '1' %}
 		<a href="{{ poem.url }}">

@@ -7,12 +7,12 @@ description: "<a href='https://pandoc.org'  target='_blank' title='Pandoc'>Pando
 ## Cheat sheet
 
 Convert a Word file into a Markdown file, following the [CommonMark](https://commonmark.org/ 'CommonMark official website') standard
-```sh
+```
 pandoc ~/Desktop/input.docx -f docx -t commonmark --wrap=none -o ~/Desktop/output.md
 ```
 
 Convert multiple Word files in a folder in a standalone Markdown file
-```sh
+```
 pandoc *.docx -f docx -t commonmark --wrap=none -s -o ~/Desktop/output.md
 ```
 
@@ -21,7 +21,7 @@ pandoc *.docx -f docx -t commonmark --wrap=none -s -o ~/Desktop/output.md
 </div>
 
 convert all files in a folder
-```sh
+```
 for f in *.docx; do pandoc '$f' -f docx -t commonmark --wrap=none -s -o '$f'.md; done
 ```
 

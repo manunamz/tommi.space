@@ -26,7 +26,7 @@ primary: "teal"
 <div class="row">
 	<div class="one column">
 		<ul class="three">
-			{% assign poetry = site.poetry | reverse %}
+			{% assign poetry = site.poetry %}
 			{% for poem in poetry %}
 				<li><a href="{{ poem.url }}">{{ poem.title }}</a></li>
 			{% endfor %}

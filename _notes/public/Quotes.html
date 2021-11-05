@@ -15,9 +15,9 @@ todo:
 		margin-bottom: 4rem;
 	}
 </style>
-{% assign quotes = site.data.quotes | sort: 'date' | reverse %}
+{% assign quotes = site.data.quotes' %}
 {% for q in quotes %}
-<p class='date' datetime='{{ q.date | date_to_xmlschema }}'>{{ q.date | date_to_long_string }}</p>
+<p class='date' datetime='{{ q.date | date_to_xmlschema }}'>{{ q.date | date: "%-d %B %Y" }}</p>
 <blockquote lang='{{ q.lang }}'{% if q.id != nil %} id='{{ q.id }}'{% endif %}>
 	<p>{{ q.quote }}</p>
 </blockquote>

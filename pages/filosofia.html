@@ -25,7 +25,7 @@ primary: "var(--green)"
 			<div class="preview box">
 				<h2 class="title">{{ post.title }}</h2>
 				<div class="caption">
-					<p class="date">{{ post.date | date_to_long_string }}</p>
+					<p class="date">{{ post.date | date: "%-d %B %Y" }}</p>
 					{{ post.excerpt }}
 				</div>
 			</div>
@@ -33,13 +33,13 @@ primary: "var(--green)"
 	{% endif %}
 {% endfor %}
 
-{% assign filinge = site.filinge | reverse %}
+{% assign filinge = site.filinge %}
 	{% for post in filinge %}
 		<a href="{{ post.url }}">
 			<div class="preview box">
 				<h2 class="title">{{ post.title }}</h2>
 				<div class="caption">
-					<p class="date">{{ post.date | date_to_long_string }}</p>
+					<p class="date">{{ post.date | date: "%-d %B %Y" }}</p>
 					{{ post.excerpt }}
 				</div>
 			</div>

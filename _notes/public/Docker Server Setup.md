@@ -23,6 +23,6 @@ Actually, it's quite useless to thoroughly write and explain all of the steps to
 ## Useful commands
 
 occ through Docker
-```sh
+```
 docker-compose exec --user www-data app php occ db:add-missing-indices
 ```

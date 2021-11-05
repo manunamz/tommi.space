@@ -12,7 +12,7 @@ layout: wrapper
 	<div class="one column">
 		<h2>{% if page.lang == 'it' %}Indice{% else %}Table of contents{% endif %}
 		</h2>
-		{% include toc.html html=content %}
+		{% include toc.liquid html=content %}
 	</div>
 </div>
 {% endif %}

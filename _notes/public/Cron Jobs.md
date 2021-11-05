@@ -33,13 +33,13 @@ Run [`crontab -e`][crontab]
 
 Cron Jobs do not log activity by default, to activate logging for an easier debugging, go to `/etc/rsyslog.conf` or `/etc/rsyslog.d/50-default.conf` and uncomment the following line:
 
-```sh
+```
 cron.*					/var/log/cron.log
 ```
 
 then run
 
-```sh
+```
 sudo service rsyslog restart && sudo service cron restart
 ```
 
@@ -62,7 +62,7 @@ Cron Jobs logs will be in **`/var/log/cron.log`**
 
 This Cron Job schedules [[Linuxplosion]] boot, and it switches it off until the following week.
 
-```sh
+```
 35 18 * * 1 sudo udisksctl mount -b /dev/sda2 && echo "`date`: Linuxplosion is up and running!" >> ~/rtcwake-log.txt
 0 21 * * 1 echo "`date`: Linuxplosion is going back to sleep until next monday at 7PM." >> ~/rtcwake-log.txt && sudo rtcwake -m off -t "$(date -d 'next Monday 18:30' '+%s')"
 ```
@@ -73,7 +73,7 @@ This Cron Job schedules [[Linuxplosion]] boot, and it switches it off until the 
 
 This Cron Job saves a list of predefined pages to [The Wayback Machine](https://web.archive.org 'The Wayback Machine') using [wayback_archiver](https://github.com/buren/wayback_archiver 'wayback_archiver')
 
-```sh
+```
 0 1 * * 1 /usr/local/bin/wayback_archiver https://tommi.space/pages-to-archive --crawl --limit=100 --verbose --log=$HOME/wayback_archiver.log && echo "\n$(date) wayback_archiver success!" >> $HOME/wayback_archiver.log
 ```
 

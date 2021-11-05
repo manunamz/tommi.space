@@ -79,13 +79,13 @@ This Cheat sheet is not in the same location as [[Cheat sheets|the main one]], s
 
 ### mounting a disk
 
-```sh
+```
 udisksctl mount -b /dev/sda2
 ```
 
 ### remove user password
 
-```sh
+```
 sudo visudo
 ```
 
@@ -97,7 +97,7 @@ ernesto ALL=(ALL) NOPASSWD:ALL
 where `ernesto` should be the name of your user.
 
 to subsequently delete the password, run:
-```sh
+```
 sudo passwd -d `whoami`
 ```
 
